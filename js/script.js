@@ -1,21 +1,23 @@
 class Produto {
   constructor() {
-    this.id = 0
-    this.nomeProduto=""
-    this.valor = 
-
+    this.id = 1;
+    this.arryaProdutos = [];
   }
 
-  adicionar() {
-    alert("Vamos adiconar um produto!");
+  salvar() {
+    let produto = this.lerDados();
+
+    console.log(produto);
   }
 
-  listar() {
-    alert("Veja todos os itens!");
-  }
+  lerDados() {
+    let produto = {};
 
-  alterar() {
-    alert("Vamos atualizar!");
+    produto.id = this.id;
+    produto.nomeProduto = document.getElementById("produto").value;
+    produto.precoProduto = document.getElementById("preco").value;
+
+    return produto;
   }
 
   excluir() {

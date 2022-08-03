@@ -10,8 +10,10 @@
     <link rel="stylesheet" href="./js/css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https: //fonts.googleapis.com/css2? familia= Nunito+Sans:wght@400;700 &family= Roboto:wght@300;400;700 & display=swap"
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&family=Roboto:wght@300;400;700&display=swap"
       rel="stylesheet"
     />
   </head>
@@ -32,13 +34,11 @@
 
         <div class="lineInput">
           <label>Valor</label>
-          <input type="text" id="valor" placeholder="Valor do produto" />
+          <input type="text" id="preco" placeholder="Valor do produto" />
         </div>
 
-        <button onclick="produto.adicionar()">Adicionar</button>
-        <button onclick="produto.listar()">Listar</button>
-        <button onclick="produto.alterar()">Alterar</button>
-        <button onclick="produto.excluir()">Excluir</button>
+        <button onclick="produto.salvar()">Salvar</button>
+        <button onclick="produto.cancelar()">Cancelar</button>
       </div>
 
       <div class="content">
@@ -49,20 +49,7 @@
             <th>Valor</th>
             <th class="center">Ações</th>
           </thead>
-          <tbody>
-            <tr>
-              <td class="center">1</td>
-              <td>Mesa sala de estar</td>
-              <td>1900</td>
-              <td class="center">
-                <img src="./js/img/editar.png" alt="Editar" />
-                <img
-                  src="./js/img/delete-button-svgrepo-com.svg"
-                  alt="Delete"
-                />
-              </td>
-            </tr>
-          </tbody>
+          <tbody></tbody>
         </table>
       </div>
     </main>
