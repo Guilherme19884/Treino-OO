@@ -11,7 +11,27 @@ class Produto {
       this.adicionar(produto);
     }
 
-    console.log(this.arrayProdutos);
+    this.listaTabela();
+  }
+
+  listaTabela() {
+    let tbody = document.getElementById("tbody");
+    tbody.innerHTML = "";
+
+    for (let i = 0; i < this.arrayProdutos.length; i++) {
+      let tr = tbody.insertRow();
+
+      let td_id = tr.insertCell();
+      let td_produto = tr.insertCell();
+      let td_valor = tr.insertCell();
+      let td_ações = tr.insertCell();
+
+      td_id.innerText = this.arrayProdutos[i].id;
+      td_produto.innerText = this.arrayProdutos[i].nomeProduto;
+      td_valor.innerText = this.arrayProdutos[i].precoProduto;
+
+      td_id.classList.add("center");
+    }
   }
 
   adicionar(produto) {
